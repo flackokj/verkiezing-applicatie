@@ -46,20 +46,35 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         body: Container(
-          margin: const EdgeInsets.only(top: 300),
+          //margin: const EdgeInsets.only(top: 300),
           width: double.infinity,
           child: Column(
             children: <Widget>[
               NamenInput(
                 namen[_namenIndex],
               ),
-              RaisedButton(
-                child: Text('Billy'),
-                onPressed: _buttonPressed,
-              ),
-              RaisedButton(
-                child: Text('Mark'),
-                onPressed: _buttonPressed,
+              // RaisedButton(
+              //   child: Text('Billy'),
+              //   onPressed: _buttonPressed,
+              // ),
+              TextField(
+                style: TextStyle(
+                  height: 1.0,
+                ),
+                decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.teal[100],
+                      width: 3.0,
+                    ),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.grey[200],
+                      width: 3.0,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
